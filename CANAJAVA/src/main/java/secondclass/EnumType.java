@@ -10,18 +10,33 @@
  * (________(                @author m.c.kunkel
  *  `------'
 */
-package client;
+package secondclass;
 
-import domain.utils.Constants;
+enum Day {
+	Sunday, Monday, Ttuesday, HumpDay, Thursday, Friday, Saturday
+}
 
-public class HelloWorld {
+public class EnumType {
 
 	public static void main(String[] args) {
-		int aNumber = 5;
-		String courseID = "CANUJava";
-		System.out.println("Hello " + courseID + " students to the Java World");
-		System.out.println(aNumber);
-		System.out.println("The solar luminosity is " + Constants.solarLuminosity + "erg/s");
+		System.out.println("The day today is " + Day.Friday);
+
+		boolean doesRun = false;
+		boolean isCorrect = true;
+		boolean isOriginal = true;
+		double grade;
+
+		if (isOriginal) {
+			if (doesRun && isCorrect) {
+				grade = 1.0;
+
+			} else {
+				grade = 0.5;
+			}
+		} else
+			grade = 0.0;
+
+		System.out.println(grade);
 	}
 
 }

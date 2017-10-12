@@ -10,18 +10,27 @@
  * (________(                @author m.c.kunkel
  *  `------'
 */
-package client;
+package secondclass;
 
-import domain.utils.Constants;
+class AType {
+	int myInt;
+	double myDouble;
+	char myChar;
 
-public class HelloWorld {
+}
+
+public class ReferenceType {
 
 	public static void main(String[] args) {
-		int aNumber = 5;
-		String courseID = "CANUJava";
-		System.out.println("Hello " + courseID + " students to the Java World");
-		System.out.println(aNumber);
-		System.out.println("The solar luminosity is " + Constants.solarLuminosity + "erg/s");
+		AType myType = new AType();
+		myType.myInt = 100;
+		myType.myDouble = 123.456;
+		myType.myChar = 'M';
+
+		System.out.println("Integer Value of my data type is : " + myType.myInt);
+		System.out.println("Double Value of my data type is : " + myType.myDouble);
+		System.out.println("Char Value of my data type is : " + myType.myChar);
+
 	}
 
 }

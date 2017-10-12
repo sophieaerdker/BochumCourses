@@ -13,7 +13,7 @@
 package client;
 
 import domain.EnergyEqualsMCSquared;
-import domain.Constants.Constants;
+import domain.utils.Constants;
 
 public class Hello {
 	public static void main(String[] args) {

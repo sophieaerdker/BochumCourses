@@ -1,6 +1,6 @@
 package domain;
 
-import domain.Constants.Constants;
+import domain.utils.Constants;
 
 public class EnergyEqualsMCSquared {
 
