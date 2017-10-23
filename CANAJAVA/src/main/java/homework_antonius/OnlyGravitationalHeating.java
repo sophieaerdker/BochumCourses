@@ -1,4 +1,4 @@
-package thirdclass;
+package homework_antonius;
 
 import java.awt.Graphics;
 
