@@ -1,7 +1,5 @@
 package homework_antonius;
 
-import java.awt.Graphics;
-
 import org.jlab.groot.data.GraphErrors;
 import org.jlab.groot.ui.TCanvas;
 
@@ -12,14 +10,16 @@ public class OnlyGravitationalHeating {
 	public static void main(String[] args) {
 		OnlyGravitationalHeating onlyGravitationalHeating = new OnlyGravitationalHeating();
 		
-		GraphErrors graphErrors = new GraphErrors();
+		GraphErrors gr = new GraphErrors();
+
 		
-		for (int i = 0; i <= 10; i++) {
-			graphErrors.addPoint((double) i, onlyGravitationalHeating.radius(i), 0, 0);
+		for (int i = 1; i <= 10; i++) {
+			System.out.println(onlyGravitationalHeating.radius(i));
+			gr.addPoint((double) i, onlyGravitationalHeating.radius(i) / Constants.solarRadius, 0., 0.);
 		}
 		
 		TCanvas canvas = new TCanvas("plot", 640, 400);
-		canvas.draw(graphErrors);
+		canvas.draw(gr);
 	}
 	
 	public double radius() {
