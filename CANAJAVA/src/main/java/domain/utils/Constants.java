@@ -4,8 +4,9 @@ public class Constants {
 	private Constants() {
 	}
 
-	public static int SCREENWIDTH = 1200;
-	public static int SCREENHEIGHT = 700;
+	public static int SCREENWIDTH = 800;
+	public static int SCREENHEIGHT = 600;
+
 
 	public static double speedOfLight = 2.99792458e8; // m/s
 	public static double ageOfUniverse = 13.8e13; // years
