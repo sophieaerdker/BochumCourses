@@ -7,14 +7,23 @@ import domain.utils.Constants;
 
 public class ThirdClassHomeworkSophieAerdker {
 
+	public static double radius(int x) {
+
+		double gravConstant = Constants.gravitationalConstant;
+		double massSun = Constants.massOfSun;
+		double ageEarth = Constants.ageOfEarth * Constants.yearToSeconds;
+		double luminosity = Constants.solarLuminosity * Constants.ergToJoule;
+
+		double r = (3.0 / 10.0) * gravConstant * Math.pow(massSun, 2) / (x * ageEarth * luminosity);
+
+		return r;
+	}
+
 	public static void main(String[] args) {
 		GraphErrors gr = new GraphErrors();
 
-		// gr.addPoint(1, 2, 0.5, 0.5);
-		// gr.addPoint(2, 3, 0.25, 0.3);
-
 		for (int i = 1; i < 21; i++) {
-			double r = OnlyGravitationalHeating.radius(i) / Constants.solarRadius;
+			double r = radius(i) / Constants.solarRadius;
 			gr.addPoint(i, r, 0, 0);
 		}
 
