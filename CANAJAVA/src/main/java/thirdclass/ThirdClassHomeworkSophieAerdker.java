@@ -11,10 +11,10 @@ public class ThirdClassHomeworkSophieAerdker {
 
 		double gravConstant = Constants.gravitationalConstant;
 		double massSun = Constants.massOfSun;
-		double ageEarth = Constants.ageOfEarth * Constants.yearToSeconds;
+		double ageSun = Constants.ageOfSun * Constants.yearToSeconds;
 		double luminosity = Constants.solarLuminosity * Constants.ergToJoule;
 
-		double r = (3.0 / 10.0) * gravConstant * Math.pow(massSun, 2) / (x * ageEarth * luminosity);
+		double r = (3.0 / 10.0) * gravConstant * Math.pow(massSun, 2) / (x * ageSun * luminosity);
 
 		return r;
 	}
