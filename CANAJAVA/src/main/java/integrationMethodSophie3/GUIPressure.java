@@ -20,6 +20,12 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 import domain.utils.Constants;
 
+// The Calculation of the temperature does not work and I didn't have enough time to fix the problem.
+// It seems like the luminosity does not decrease fast enough, so that the temperature increases to fast
+// I tried to fix the problem with a density depending on r instead of an average density, but this does not work either
+// in 'StartCalculation()' you can choose between an integration of the temperature with an average density or a density depending on the 
+// pressure at radius r
+
 public class GUIPressure extends JFrame implements IntegrationListener {
 
 	private JPanel aJPanel;
