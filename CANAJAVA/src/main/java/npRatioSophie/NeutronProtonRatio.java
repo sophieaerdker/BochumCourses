@@ -18,11 +18,11 @@ public class NeutronProtonRatio {
 
 	public void setnewg(double temperature) {
 
-		if (temperature >= 3) {
-			this.g = 10;
+		if (temperature >= 0.1) {
+			this.g = 10.75;
 
 		} else {
-			this.g = 3;
+			this.g = 3.36;
 		}
 	}
 
@@ -32,10 +32,9 @@ public class NeutronProtonRatio {
 
 	public double temperature(double t) {
 
-		return 1.82e10 * Math.pow(g, -0.25) * 1 / Math.sqrt(t) * 8.617e-5 * 10e-6; //
+		return 1.81e10 * Math.pow(g, -0.25) * 1 / Math.sqrt(t) * 8.617e-5 * 10e-6; //
 		// with boltzmann constant in eV/K
-		// -->
-		// Temperature in MeV
+		// --> Temperature in MeV
 
 		// without factor g --> to get a continuously relation between time and
 		// temperature:
@@ -65,7 +64,7 @@ public class NeutronProtonRatio {
 		// n_n = n_0n * exp(-t/tau)
 		// n_p = n_0p + n_0n * (1- exp(-t/tau) )
 
-		double tau = 614; // s
+		double tau = 900; // s
 
 		return 1 / (Math.exp(t / tau) * (1 / np_ratio + 1) - 1);
 	}
